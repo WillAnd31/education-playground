@@ -1,0 +1,12 @@
+{
+  "name": "react-playground",
+  "dependencies": {
+    "react-dom": "registry:npm/react-dom#15.0.1+20160826174104"
+  },
+  "globalDependencies": {
+    "material-ui": "registry:dt/material-ui#0.15.1+20161016142415",
+    "node": "registry:dt/node#6.0.0+20161014191813",
+    "react": "registry:dt/react#0.14.0+20161008064207",
+    "react-tap-event-plugin": "registry:dt/react-tap-event-plugin#0.0.0+20160602142434"
+  }
+}

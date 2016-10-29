@@ -1,0 +1,120 @@
+.willand-main {
+
+	.title-container {
+		height: 16em;
+		overflow: hidden;
+		position: relative;
+
+		.title-img {
+			width: 100%;
+		}
+
+		.title {
+			position: absolute;
+			color: white;
+			top: 0;
+			font-size: 3em;
+			text-align: center;
+			width: 100%;
+			line-height: 4em;
+			vertical-align: middle;
+		}
+	}
+
+	.content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 90%;
+		min-width: 90%;
+		min-height: 100vh;
+		margin-left: 5%;
+
+		.charts {
+			display: flex;
+			width: 100vw;
+			justify-content: space-around;
+
+			canvas {
+				width: 40vw !important;
+			}
+		}
+
+		.lecture-images {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			align-items: center;
+
+			i {
+				font-size: 5em;
+			}
+
+			img {
+				width: 40%;
+				height: auto;
+			}
+		}
+
+		.socrates-container {
+			display: flex;
+			align-items: center;
+
+			.socrates-text {
+				margin-left: 2em;
+			}
+		}
+
+		.involvement-container {
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 50%;
+			}
+
+			.involvement-text {
+				margin-right: 2em;
+			}
+		}
+
+		.learning-styles-container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			img {
+				width: inherit;
+			}
+		}
+
+	}
+
+	.resources {
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 4em;
+		margin-bottom: 4em;
+
+		h3 {
+			margin-bottom: 0;
+		}
+
+		ol {
+			margin-top: 0;
+
+			li {
+				font-size: 0.8em;
+				line-height: 100%;
+			}
+		}
+
+	}
+
+	.willand-footer {
+		width: 100%;
+	}
+
+}
