@@ -8,10 +8,6 @@ const ENV = process.env.NODE_ENV = process.env.ENV = 'prod';
 module.exports = webpackMerge(commonConfig, {
 	debug: false,
 
-	output: {
-		path: helpers.fromRoot('dist-tmp')
-	},
-
 	plugins: [
 		new webpack.NoErrorsPlugin(),
 		new webpack.optimize.DedupePlugin(),
@@ -19,18 +15,6 @@ module.exports = webpackMerge(commonConfig, {
 		new webpack.DefinePlugin({
 			'ENV': JSON.stringify(ENV)
 		})
-	],
-
-	htmlLoader: {
-		minimize: true,
-		removeAttributeQuotes: false,
-		caseSensitive: true,
-		customAttrSurround: [
-			[/#/, /(?:)/],
-			[/\*/, /(?:)/],
-			[/\[?\(?/, /(?:)/]
-		],
-		customAttrAssign: [/\)?\]?=/]
-	},
+	]
 
 });

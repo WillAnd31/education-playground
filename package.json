@@ -4,12 +4,18 @@
   "description": "Education Multimedia Project",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:dev",
+    "postinstall": "typings install",
+    "clean": "rm -rf node_modules typings dist",
+    "build": "npm run build:dev",
+    "build:clean": "rm -rf ./dist && rm -rf ./dist-tmp",
     "build:dev": "npm run server:dev",
-    "server:dev": "npm run server:watch & npm run build:watch",
-    "server:watch": "NODE_ENV=dev nodemon --debug ./server.js --watch server.js",
+    "build:prod": "npm run build:general",
+    "build:general": "webpack --config webpack.config.js --display-error-details --progress",
     "build:watch": "npm run build:clean && NODE_ENV=dev webpack --config webpack.config.js --watch --display-error-details --progress",
-    "build:clean": "rm -rf ./dist && rm -rf ./dist-tmp"
+    "server:watch": "NODE_ENV=dev nodemon --debug ./server.js --watch server.js",
+    "start": "npm run build:dev",
+    "server:dev": "npm run server:watch & npm run build:watch",
+    "start:prod": "npm run build:prod && pm2 startOrRestart ecosystem.json"
   },
   "author": "Will Anderson",
   "license": "MIT",
