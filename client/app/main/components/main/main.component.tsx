@@ -250,7 +250,7 @@ export class Main extends React.Component<{}, {}> {
 	}
 
 	goToGithub () {
-		window.open('https://github.com/willand31', '_blank');
+		window.open('https://github.com/WillAnd31/education-playground', '_blank');
 	}
 
 }
