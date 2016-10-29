@@ -1,0 +1,11 @@
+{
+	"apps": [
+		{
+			"name": "education",
+			"script": "server.js",
+			"env": {
+				"NODE_ENV": "prod"
+			}
+		}
+	]
+}
